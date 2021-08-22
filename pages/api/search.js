@@ -15,6 +15,13 @@ export default async function search(req,res){
             }
         },
         {
+            $project:{
+                description:1,
+                name:1,
+                summary:1
+            }
+        },
+        {
             $limit:1
    
         }
